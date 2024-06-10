@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio-1</title>
+    <script
+      src="https://kit.fontawesome.com/1055036805.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="card">
+            <div class="img-card"></div>
+            <div>
+                <img src="assets/img/casa.jpg" alt="" style="width: 20vh;">
+            </div>
+              <h4>Cama para perros <i class="fa-solid fa-paw"></i>
+            </h4>
+              <p>Precio base: $<span class="precio-inicial"></span> </p>
+        
+              <p>Cantidad: <span class="cantidad">0</span>
+                <button 
+
+        
+
+                onclick=
+                " 
+                cantidad = document.querySelector('.cantidad');
+                cantidadSuma = Number(cantidad.innerHTML)
+                cantidadSuma = cantidadSuma + 1;
+                cantidad.innerHTML = cantidadSuma;
+
+                valorInicial = document.querySelector('.valor-total');
+                valorInicial.innerHTML = precio.innerHTML;
+                valorFinal = valorInicial.innerHTML * cantidadSuma;
+                valorInicial.innerHTML = valorFinal;
+                ">+</button>
+                <button 
+                onclick=
+                "
+            
+            if (cantidad.innerHTML <= 0) {
+                    return;
+                }   else {
+
+    
+                cantidad = document.querySelector('.cantidad');
+                cantidadResta = Number(cantidad.innerHTML);
+                cantidadResta = cantidadResta - 1;
+                cantidad.innerHTML = cantidadResta;
+
+                valorInicial = document.querySelector('.valor-total');
+                valorInicial.innerHTML = precio.innerHTML;
+                valorFinal = valorFinal - valorInicial.innerHTML;
+                valorInicial.innerHTML = valorFinal;
+                }
+                ">-</button>
+              </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="total-section">
+        <p>Total a pagar: $<span class="valor-total">0</span> </p>
+    </div>
+
+    
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
